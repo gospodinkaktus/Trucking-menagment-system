@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS - Transport Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="home-page" id="top">
+        <nav class="navbar-home"> 
+            <ul class="nav-home-list"> 
+                <li class="nav-home-list-login">
+                    <a href="login-screen.html" style="cursor:pointer; color:white; text-decoration: none;">Login</a>
+                </li>
+                <li class="nav-home-list-login" id="nav-dropdown-trigger" style="position: relative;">
+                    Navigation on site
+                    <div id="nav-menu" class="nav-dropdown hidden">
+                        <a href="#top">Home</a>
+                        <a href="#add-section-anchor">Add Tour</a>
+                        <a href="#tours-container">Tours List</a>
+                        <a href="#filter-anchor">Filter</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="toure-heading">
+        <h1 class="heading-home">Welcome <span class="ime-home">Driver</span></h1>
+    </div>
+
+    <div class="add-toure-before" id="add-section-anchor"> 
+        <p class="paragraph-add-toure">Add your past tours here:</p>
+        <button id="add-toure">Add tour</button> 
+        <button class="filter-toure-button">FILTER</button>
+    </div>
+
+    <div class="add-toure hidden">
+        <h1 class="heading-add-toure">Add Your Tour</h1>
+        <p class="paragraph-at">Tour Name:</p> 
+        <input class="input-add-toure" id="input-name" type="text" placeholder="e.g. Wood Transport">
+        <p class="paragraph-at">Distance:</p>
+        <input class="input-add-toure" id="input-km" type="number" placeholder="e.g. 1000">
+        <p class="paragraph-at">Price:</p>
+        <input class="input-add-toure" id="input-price" type="number" placeholder="e.g. 3800">
+        <button id="btn-add-toure" class="btn-add-toure">SUBMIT</button>
+    </div>
+
+    <div id="tours-container" class="container-grid"></div>
+
+    <section id="filter-anchor"> 
+        <div class="filter-toure hidden">
+            <h1 class="heading-filter-toure">FILTER TOURS</h1>
+            <p><b>Search by name:</b></p>
+            <input class="input-ime-filter" type="text" placeholder="e.g. Wood transport">
+            
+            <p><b>Filter by distance:</b></p>
+            <div class="input-filter-udaljenost-toure"> 
+                <input class="input-udaljenost-filter minFilterDistance" type="number" placeholder="MIN"> 
+                <input class="input-udaljenost-filter maxFilterDistance" type="number" placeholder="MAX"> 
+            </div>
+            
+            <p><b>Filter by price:</b></p>
+            <div class="inputer-filter-cijena-toure">
+                <input class="input-udaljenost-filter minFilterPrice" type="number" placeholder="MIN"> 
+                <input class="input-udaljenost-filter maxFilterPrice" type="number" placeholder="MAX"> 
+            </div>
+            
+            <button class="bttn-filter">APPLY FILTERS</button>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

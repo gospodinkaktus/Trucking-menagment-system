@@ -1,0 +1,439 @@
+/* RESET / OSNOVA */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1a1c20 0%, #2c3e50 50%, #bdc3c7 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: white;
+}
+
+.body-login {
+    background-image: url(images/slika2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.login-screen {
+    display: flex;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.inputls {
+    font-size: 45px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+.login-button {
+    width: 400px;
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    border-radius: 15px;
+    color: white;
+    border: none;
+}
+
+.login-button:hover {
+    opacity: 0.7;
+}
+
+.navbar-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: #1c1f26;
+    z-index: 100;
+}
+
+.nav-home-list {
+    display: flex;
+    list-style: none;
+    padding: 25px 20px;
+    margin: 0;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.nav-home-list-login {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-home-list-login::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background-color: white;
+    transition: width 0.4s;
+}
+
+.nav-home-list-login:hover::after {
+    width: 100%;
+}
+
+.toure-heading {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.heading-home {
+    font-size: 80px;
+    font-weight: 300;
+}
+
+.heading-ls {
+    font-size: 64px;
+    font-weight: 100;
+}
+
+.add-toure-before {
+    margin: 30px 0 0 20px;
+    max-width: 500px;
+}
+
+.paragraph-add-toure {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+#add-toure {
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #1c1f26;
+    color: white;
+    width: 200px;
+    height: 70px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#add-toure:hover {
+    background-color: #2a2e38;
+}
+
+.add-toure {
+    border: 2px solid #1c1f26;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 40px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(15, 15, 20, 0.7);
+    background: rgba(28, 31, 38, 0.9);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.heading-add-toure {
+    font-size: 42px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.input-add-toure {
+    font-size: 20px;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1c1f26;
+    padding: 0 15px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.paragraph-at {
+    font-size: 20px;
+    font-weight: 400;
+    align-self: flex-start;
+    margin: 10px 0;
+}
+
+.btn-add-toure {
+    font-size: 24px;
+    width: 100%;
+    height: 55px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add-toure:hover {
+    background-color: #34495e;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.item {
+    background-color: #1c1f26;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.item:hover {
+    background-color: #242831;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.img-grid {
+    width: 100%;
+    height: 200px;
+    background-color: #0f1115;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.img-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.button-slika { 
+    background-color: #1c1f26;
+    color: white;
+    padding: 12px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.button-slika:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    box-shadow: 0 0 15px #2980b980;
+}
+
+.text-div {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.text-div p {
+    margin: 8px 0;
+}
+
+.filter-toure {
+    position: fixed;
+    top: 6rem;
+    right: 2rem;
+    width: 420px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(28, 31, 38, 0.95);
+    border: 2px solid #1c1f26;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.heading-filter-toure { 
+    padding-left: 6rem;
+}
+
+.bttn-filter { 
+    border: none;
+    border-radius: 15px;
+    background-color: #1c1f26;
+    color:white; 
+    font-size: 22px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor:pointer;
+    transition: transform 0.15s, opacity 0.15s;
+    margin-top: 1.7rem;
+} 
+
+.bttn-filter:hover { 
+  transform: translateY(-2px);
+}
+
+.bttn-filter:active {
+    opacity: 0.5;
+}
+
+.input-ime-filter {
+    width: 210px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: -15px;
+    font-size: 18px;
+    color:white;
+}
+
+.minFilterUdaljenost,
+.maxFilterUdaljenost,
+.minFilterCijena,
+.maxFilterCijena {
+    width: 150px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: -15px;
+    font-size:18px;
+    color:white;
+}
+
+.filter-toure-button { 
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #1c1f26;
+    color: white;
+    width: 200px;
+    height: 70px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.filter-toure-button:hover {
+    background-color: #2a2e38;
+}
+
+.reset-filter {
+    font-size: 22px;
+    border: none;
+    border-radius: 15px;
+    background-color: #2c3e50;
+    color:white;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.reset-filter:hover {
+    background-color: #34495e;
+}
+
+.paragraph-ls { 
+    font-size: 32px;
+    font-weight: 100;
+    font-style: italic;
+}
+/* ALL YOUR ORIGINAL CSS REMAINS, ADD THIS AT THE BOTTOM */
+
+/* Navigation Dropdown Menu */
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1c1f26;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 2000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    margin-top: 10px;
+}
+
+.nav-dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.nav-dropdown a:hover {
+    background-color: #34495e;
+}
+
+/* Ensure filter inputs are visible */
+.input-udaljenost-filter {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* Reset button styling */
+.reset-filter {
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.reset-filter:hover {
+    background-color: #c0392b;
+}
